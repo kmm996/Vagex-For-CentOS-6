@@ -155,8 +155,10 @@ cd /root/.vnc;du -sh ./*;rm -fr *.log
   [2]: http://jingyan.baidu.com/article/11c17a2c7f656af446e39def.html
   [3]: http://vagex.com/?ref=389929
 
+--------------------------------------------------------------
+--------------------------------------------------------------
 
-
+利用VPS + VagexRobot.AllInOne.php脚本挂机赚钱
 
 
 一、纯净环境的VPS
@@ -178,8 +180,8 @@ cd /root/.vnc;du -sh ./*;rm -fr *.log
 下载
 
 wget https://raw.githubusercontent.com/WangCharlie/Vagex-For-CentOS-6/master/VagexRobot.AllInOne.php
-1
-wget https://raw.githubusercontent.com/WangCharlie/Vagex-For-CentOS-6/master/VagexRobot.AllInOne.php
+
+
 执行如下命令：centos系统替换 apt-get 为 yum 即可。
 
 
@@ -217,8 +219,7 @@ apt-get install screen
 
 
 echo "php /root/VagexRobot.AllInOne.php" >> /etc/rc.local 添加计划任务每隔3小时自动重启，运行crontab -e 0 */3 * * *  /sbin/reboot
-1
-echo "php /root/VagexRobot.AllInOne.php" >> /etc/rc.local 添加计划任务每隔3小时自动重启，运行crontab -e 0 */3 * * *  /sbin/reboot
+
 vagex php挂机脚本作者：http://www.v2ex.com/member/horsley
 
 本文固定链接: http://www.gblm.net/230.html
