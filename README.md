@@ -154,3 +154,76 @@ cd /root/.vnc;du -sh ./*;rm -fr *.log
   [1]: http://ftp-idc.pconline.com.cn/1eb24933b3763e1914dfd39001c8e196/pub/download/201010/VNC-5.3.2-Windows.exe
   [2]: http://jingyan.baidu.com/article/11c17a2c7f656af446e39def.html
   [3]: http://vagex.com/?ref=389929
+
+
+
+
+
+一、纯净环境的VPS
+
+第一步：注册vagex账号：
+
+点击这里进入注册页面来注册vagex账号
+
+需要填写邮箱:xxxxx 
+
+
+利用VPS + VagexRobot.AllInOne.php脚本挂机赚钱 - 第1张  | 乐意分享
+
+第二步：购买VPS 
+第三步：
+
+选择 debian 系统
+到 https://github.com/WangCharlie/Vagex-For-CentOS-6 点击左边的：Download Gist 下载源码 VagexCheater.AllInOne.php中的set_userid账号改为你自己的账号 最好修改下gmail邮箱不改也没关系。 修改后把VagexCheater.AllInOne.php上传到 root 目录下。
+下载
+
+wget https://raw.githubusercontent.com/WangCharlie/Vagex-For-CentOS-6/master/VagexRobot.AllInOne.php
+1
+wget https://raw.githubusercontent.com/WangCharlie/Vagex-For-CentOS-6/master/VagexRobot.AllInOne.php
+执行如下命令：centos系统替换 apt-get 为 yum 即可。
+
+
+apt-get update 
+apt-get install php php5-cli curl libcurl3 libcurl3-dev php5-curl screen -y
+sed -i "s/389929/$1/" VagexRobot.AllInOne.php
+screen -dmS vagex php /root/VagexRobot.AllInOne.php
+(crontab -u root -l; echo "@daily screen -X -S vagex quit; screen -dmS vagex php VagexRobot.AllInOne.php" ) | crontab -u root -
+查看：
+
+screen -r vagex
+
+
+二、已放置网站的配置好PHP环境的VPS
+1.安装screen
+
+centos 系统
+yum install screen
+
+
+debian系统
+
+apt-get install screen
+
+
+2.然后执行上边的2-4即可。
+4.收益估算：
+
+
+成本：
+收益：约
+利润：
+
+最后补充一个重启自动启动：
+
+
+echo "php /root/VagexRobot.AllInOne.php" >> /etc/rc.local 添加计划任务每隔3小时自动重启，运行crontab -e 0 */3 * * *  /sbin/reboot
+1
+echo "php /root/VagexRobot.AllInOne.php" >> /etc/rc.local 添加计划任务每隔3小时自动重启，运行crontab -e 0 */3 * * *  /sbin/reboot
+vagex php挂机脚本作者：http://www.v2ex.com/member/horsley
+
+本文固定链接: http://www.gblm.net/230.html
+转载请注明: Admin 2017年01月14日 于 乐意分享 发表
+
+
+
+
